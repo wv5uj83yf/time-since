@@ -1,45 +1,107 @@
 {
-	"name": "timesince",
-	"displayName": "TimeSince",
-	"description": "Shows a timer that displays the how long its been since the last time you did something",
-	"version": "0.0.1",
-	"engines": {
-		"vscode": "^1.48.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onCommand:timesince.helloWorld"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "timesince.helloWorld",
-				"title": "Hello World"
-			}
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"lint": "eslint src --ext ts",
-		"watch": "tsc -watch -p ./",
-		"pretest": "npm run compile && npm run lint",
-		"test": "node ./out/test/runTest.js"
-	},
-	"devDependencies": {
-		"@types/vscode": "^1.48.0",
-		"@types/glob": "^7.1.3",
-		"@types/mocha": "^8.0.0",
-		"@types/node": "^14.0.27",
-		"eslint": "^7.6.0",
-		"@typescript-eslint/eslint-plugin": "^3.8.0",
-		"@typescript-eslint/parser": "^3.8.0",
-		"glob": "^7.1.6",
-		"mocha": "^8.0.1",
-		"typescript": "^3.8.3",
-		"vscode-test": "^1.4.0"
-	}
+  "name": "timesince",
+  "displayName": "TimeSince",
+  "description": "Shows a timer that displays the how long its been since the last time you did something",
+  "version": "0.0.1",
+  "publisher": "wvagharfard",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/williamv1217/time-since"
+  },
+  "engines": {
+    "vscode": "^1.48.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "Timer"
+  ],
+  "activationEvents": [
+    "onCommand:timesince.startTimer"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "timesince.startTimer",
+        "title": "Time Since: Start"
+      },
+      {
+        "command": "timesince.stopTimer",
+        "title": "Time Since: Stop"
+      },
+      {
+        "command": "timesince.resetTimer",
+        "title": "Time Since: Reset"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Time Since Configurations",
+      "properties": {
+        "timesince.sinceName": {
+          "type": "string",
+          "default": "coffee",
+          "description": "Name of the thing you are counting from"
+        },
+        "timesince.textColor.useTerminalColors": {
+          "type": "boolean",
+          "default": true,
+          "description": "Use terminal ansi colors for green, yellow, and red"
+        },
+        "timesince.textColor.green": {
+          "type": "string",
+          "default": "#3ccf79",
+          "description": "Color of the green text"
+        },
+        "timesince.textColor.yellow": {
+          "type": "string",
+          "default": "#fce566",
+          "description": "Color of the yellow text"
+        },
+        "timesince.textColor.red": {
+          "type": "string",
+          "default": "#ff4561",
+          "description": "Color of the red text"
+        },
+        "timesince.limitTime.good": {
+          "type": "number",
+          "default": "120",
+          "description": "Set a time limit (in minutes) for the 'good' range, "
+        },
+        "timesince.limitTime.average": {
+          "type": "number",
+          "default": "180",
+          "description": "Set a time limit (in minutes) for the 'average' range"
+        },
+        "timesince.limitTime.bad": {
+          "type": "number",
+          "default": "240",
+          "description": "Set a time limit (in minutes) for the 'bad' range"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint src --ext ts",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.48.0",
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.0",
+    "@types/node": "^14.0.27",
+    "eslint": "^7.6.0",
+    "@typescript-eslint/eslint-plugin": "^3.8.0",
+    "@typescript-eslint/parser": "^3.8.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.0.1",
+    "typescript": "^3.8.3",
+    "vscode-test": "^1.4.0"
+  }
 }
