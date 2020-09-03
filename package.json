@@ -38,14 +38,14 @@
     ],
     "configuration": {
       "type": "object",
-      "title": "Time Since Configurations",
+      "title": "TimeSince",
       "properties": {
         "timesince.sinceName": {
           "type": "string",
           "default": "coffee",
           "description": "Name of the thing you are counting from"
         },
-        "timesince.textColor.useTerminalColors": {
+        "timesince.useTerminalColors": {
           "type": "boolean",
           "default": true,
           "description": "Use terminal ansi colors for green, yellow, and red"
