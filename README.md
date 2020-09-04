@@ -29,8 +29,12 @@ This extension contributes the following settings:
 
 ## Release Notes
 
-### 0.9.0
+### 1.0.0
 
 Initial release
+
+## Acknowledgements
+
+Icon by Freepik from [flaticon](https://www.flaticon.com/)
 
 ---
