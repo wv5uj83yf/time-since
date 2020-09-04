@@ -3,7 +3,7 @@
   "displayName": "TimeSince",
   "description": "Shows a timer that displays the how long its been since the last time you did something",
   "version": "0.0.1",
-  "publisher": "wvagharfard",
+  "publisher": "wvaghar",
   "repository": {
     "type": "git",
     "url": "https://github.com/williamv1217/time-since"
@@ -40,10 +40,15 @@
       "type": "object",
       "title": "TimeSince",
       "properties": {
-        "timesince.sinceName": {
+        "timesince.activityName": {
           "type": "string",
           "default": "coffee",
-          "description": "Name of the thing you are counting from"
+          "description": "Name of the activity you are timing"
+        },
+        "timesince.noColor": {
+          "type": "boolean",
+          "default": false,
+          "description": "Text will use statusbar text color"
         },
         "timesince.useTerminalColors": {
           "type": "boolean",
@@ -65,20 +70,15 @@
           "default": "#ff4561",
           "description": "Color of the red text"
         },
-        "timesince.limitTime.good": {
-          "type": "number",
-          "default": "120",
-          "description": "Set a time limit (in minutes) for the 'good' range, "
-        },
         "timesince.limitTime.average": {
           "type": "number",
-          "default": "180",
-          "description": "Set a time limit (in minutes) for the 'average' range"
+          "default": "60",
+          "description": "Time (in minutes) where the 'average' range starts"
         },
         "timesince.limitTime.bad": {
           "type": "number",
-          "default": "240",
-          "description": "Set a time limit (in minutes) for the 'bad' range"
+          "default": "120",
+          "description": "Time (in minutes) where the 'bad' starts"
         }
       }
     }

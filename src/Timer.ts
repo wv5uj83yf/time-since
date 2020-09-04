@@ -38,6 +38,9 @@ class Timer {
   }
 
   stopTimer() {
+    if (!this.running) {
+      return;
+    }
     console.log("stopping the timer");
     clearInterval(this.timer);
     this.running = false;
@@ -110,8 +113,11 @@ class Timer {
     var red;
     var yellow;
     let config = vscode.workspace.getConfiguration("timesince");
+    let statusBarForeground = new vscode.ThemeColor("statusBar.foreground");
 
-    if (config.textColor.useTerminalColors) {
+    if (config.noColor) {
+      return statusBarForeground;
+    } else if (config.useTerminalColors) {
       green = new vscode.ThemeColor("terminal.ansiGreen");
       red = new vscode.ThemeColor("terminal.ansiRed");
       yellow = new vscode.ThemeColor("terminal.ansiYellow");
@@ -121,9 +127,9 @@ class Timer {
       yellow = config.textColor.yellow;
     }
 
-    if (minutes <= config.limitTime.good) {
+    if (minutes < config.limitTime.average) {
       return green;
-    } else if (minutes <= config.limitTime.average) {
+    } else if (minutes < config.limitTime.bad) {
       return yellow;
     } else {
       return red;
