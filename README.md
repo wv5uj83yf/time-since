@@ -8,6 +8,22 @@ Set the name of the activity you are timing. TimeSince will create a simple time
 
 TimeSince defaults to using 3 preselected colors, however you can change the colors to whatever you want, use your integrated terminals ansiGreen, ansiYellow, and ansiRed colors, or remove the colorizing option completely.
 
+### Green Text Color
+
+![green-img](https://github.com/williamv1217/time-since/blob/master/images/green.png?raw=true)
+
+### Yellow Text Color
+
+![yellow-img](https://github.com/williamv1217/time-since/blob/master/images/yellow.png?raw=true)
+
+### Red Text Color
+
+![red-img](https://github.com/williamv1217/time-since/blob/master/images/red.png?raw=true)
+
+### No Text Color (uses your default status bar color)
+
+![nocolor-img](https://github.com/williamv1217/time-since/blob/master/images/no-color.png?raw=true)
+
 ## Requirements
 
 VS Code
