@@ -51,6 +51,6 @@ Initial release
 
 ## Acknowledgements
 
-Icon by Freepik from [flaticon](https://www.flaticon.com/)
+Icon by Freepik from [www.flaticon.com](https://www.flaticon.com/)
 
 ---
