@@ -1,6 +1,6 @@
 {
   "name": "timesince",
-  "displayName": "TimeSince",
+  "displayName": "Time Since",
   "description": "Shows a timer that displays the how long its been since the last time you did something",
   "version": "1.0.0",
   "publisher": "wvaghar",
@@ -86,7 +86,7 @@
         "timesince.limitTime.bad": {
           "type": "number",
           "default": 120,
-          "description": "Time (in minutes) where the 'bad' starts"
+          "description": "Time (in minutes) where the 'bad' range starts"
         }
       }
     }
